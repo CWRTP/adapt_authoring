@@ -59,7 +59,7 @@ define(function(require) {
 
         this.render();
 
-        _.defer(this.postRender);
+        _.defer(_.bind(this.postRender, this));
 
     },
 
